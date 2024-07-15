@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Aesthetic MP3 Player</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
 </head>
 <body>
     <main class="background">
         <div class="album-div">
-            <img src="midia/no song.png" alt="">
+            <img id="album-cover" src="midia/no song.png" alt="">
         </div>
         <div class="music-selector-div">
             <div class="song-info">
@@ -31,7 +32,7 @@
                         <label class="upload-button" for="upload-button">
                             <img src="midia/upload.png" alt="submit">
                         </label>
-                        <input id="upload-button" type="file" multiple accept="audio/*" name="song[]">
+                        <input id="upload-button" type="file" multiple accept="audio/*">
                     </form>                   
                     <img id="shuffle-button" src="midia/shuffle-button.png" alt="shuffle playlist button" onclick="shuffleSongs(currentPlayList)">
                 </div>
