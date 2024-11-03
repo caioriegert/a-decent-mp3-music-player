@@ -128,10 +128,18 @@ const playSong = (indexPlaylist) => {
 
 
 audio.addEventListener('timeupdate', () =>{
+
     const timeLeftSeconds = audio.duration - audio.currentTime;
     const minutes = Math.floor(timeLeftSeconds / 60).toString().padStart(2, '0');
     const seconds = Math.floor(timeLeftSeconds - minutes * 60).toString().padStart(2, '0');
-    document.getElementById('time-left').innerHTML = minutes + ":" + seconds;
+    const timeLeftToShow = document.getElementById('time-left').innerHTML = minutes + ":" + seconds;
+    console.log(audio.currentTime)
+    //Esse if debaixo dá um delay no mostrador do tempo para não aparecer NaN por causa da demora para aparecer um número.
+    if(audio.currentTime < 0.05){
+        document.getElementById('time-left').innerHTML = "";
+    }else{
+        timeLeftToShow
+    }
     }
 )
 
