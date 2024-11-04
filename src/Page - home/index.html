@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Aesthetic MP3 Player</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
+    <link rel="stylesheet" href="/src/Page - home/style.css">
+    <title>A Decent MP3 Player</title>
 </head>
 <body>
     <!--Teste-->
     <main class="background">
         <div class="album-div">
-            <img id="album-cover" src="midia/no song.png" alt="">
+            <img id="album-cover" src="/midia/no song.png" alt="">
         </div>
         <div class="music-selector-div">
             <div class="song-info">
@@ -24,18 +23,18 @@
             </div>
             <div class="song-nav">
                 <div class="play-pause">
-                    <img id="previous-song-button" src="midia/previous-button.png" alt="previous song button" onclick="previousSong()">
-                    <img id="play-pause-song-button" src="midia/play-button.png" alt="play music button" onclick="pauseMusic()">
-                    <img id="next-song-button" src="midia/next-button.png" alt="next song button" onclick="nextSong()">
+                    <img id="previous-song-button" src="/midia/previous-button.png" alt="previous song button" onclick="previousSong()">
+                    <img id="play-pause-song-button" src="/midia/play-button.png" alt="play music button" onclick="pauseMusic()">
+                    <img id="next-song-button" src="/midia/next-button.png" alt="next song button" onclick="nextSong()">
                 </div>
                 <div class="upload-shuffle">
                     <form id="get-song-form" enctype="multipart/form-data" method="post">
                         <label class="upload-button" for="upload-button">
-                            <img src="midia/upload.png" alt="submit">
+                            <img src="/midia/upload.png" alt="submit">
                         </label>
                         <input id="upload-button" type="file" multiple accept="audio/*">
                     </form>                   
-                    <img id="shuffle-button" src="midia/shuffle-button.png" alt="shuffle playlist button" onclick="shuffleSongs(currentPlayList)">
+                    <img id="shuffle-button" src="/midia/shuffle-button.png" alt="shuffle playlist button" onclick="shuffleSongs(currentPlayList)">
                 </div>
             </div>
             <span id="music-playlist" class="music-playlist">
@@ -43,6 +42,6 @@
             </span>
         </div>
     </main>
-    <script src="script.js"></script>
+    <script src="/src/Page - home/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/Page - login/login.css">
+    <title>A Decent MP3 Player</title>
+</head>
+<body>
+    <main>
+        <div class="alignment">
+            <div class="title-page">
+                <h1>A Decent MP3 Player</h1>
+                <p>Upload your favorite songs and enjoy whenever you want in this aesthetic MP3 player!</p>
+            </div>
+            <div class="box-login">
+                <!--Primeiro finalizar o CSS e JS dá página de login para depois integrar com banco de dados e afins-->
+                <form id="form-login" action="">
+                    <div class="user-area login-div-input">
+                        <label for="user-input-login">Username:</label>
+                        <input class="input-edit"  id="user-input-login" type="text" name="Username login" placeholder="Username">
+                    </div>
+                    <div class="password-area login-div-input">
+                        <label for="password-input-login">Password:</label>
+                        <input class="input-edit" id="password-input-login" type="password" name="Password login" placeholder="Password">
+                    </div>
+                    <div class="div-login-button">
+                        <button type="submit">Login</button>
+                    </div>
+                    <p class="register-changer">Don't have an account?</p>
+                </form>
+            </div>
+            <div class="box-register hidden">
+                <form id="form-register" action="">
+                    <div class="user-area register-div-input">
+                        <label for="user-input-register">Username:</label>
+                        <input class="input-edit"  id="user-input-register" type="text" name="Username register" placeholder="What is your Username?">
+                    </div>
+                    <div class="password-area register-div-input">
+                        <label for="password-input-register">Password:</label>
+                        <input class="input-edit" id="password-input-register" type="password" name="Password register" placeholder="Enter your password.">
+                    </div>
+                    <div class="password-area-confirmation register-div-input">
+                        <label for="password-confirmation-input-register">Password confirmation:</label>
+                        <input class="input-edit" id="password-confirmation-input-register" type="password" name="Password confirmation register" placeholder="Confirm your password.">
+                    </div>
+                    <div class="div-register-button">
+                        <button type="submit">Login</button>
+                    </div>
+                    <p class="login-changer">Already have an account?</p>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="/src/Page - login/login.js"></script>
+</body>
+</html>

@@ -96,19 +96,19 @@ let playListSongs = [
         songName: "Valerie",
         songArtist: "The Weeknd",
         songAlbum: "Trilogy",
-        songFile: "../songs/valerie.mp3",
+        songFile: "/songs/valerie.mp3",
     },
     {
         songName: "The Hills",
         songArtist: "The Weeknd",
         songAlbum: "Beauty Behind the Madness",
-        songFile: "../songs/the-hills.mp3",
+        songFile: "/songs/the-hills.mp3",
     },
     {
         songName: "Some Unholy War",
         songArtist: "Amy Winehouse",
         songAlbum: "Back to Black",
-        songFile: "../songs/some-unholy-war.mp3",
+        songFile: "/songs/some-unholy-war.mp3",
     }
 ]
 
@@ -120,7 +120,7 @@ const playSong = (indexPlaylist) => {
     audio.src = songToPlay;
     audio.play();
     console.log(`Está tocando ${currentPlayList[indexPlaylist].songName}`);
-    playPauseSongButton.src = "midia/pause-music.png";
+    playPauseSongButton.src = "/midia/pause-music.png";
     document.querySelector('.song-info').style.display = 'flex';
     document.getElementById('song-name').innerText = currentPlayList[indexPlaylist].songName;
     document.getElementById('song-artist-album').innerText = `${currentPlayList[indexPlaylist].songArtist} - ${currentPlayList[indexPlaylist]?.songAlbum}`;
@@ -168,11 +168,11 @@ const playChosenSong = (indexPlaylist) => {
 const pauseMusic = () => {
     if (audio.paused) {
         audio.play();
-        playPauseSongButton.src = "midia/pause-music.png";
+        playPauseSongButton.src = "/midia/pause-music.png";
         console.log("Play");
     } else{
         audio.pause();
-        playPauseSongButton.src = "midia/play-button.png";
+        playPauseSongButton.src = "/midia/play-button.png";
         console.log("Pause")
     }
 };
@@ -181,7 +181,7 @@ const pauseMusic = () => {
 const nextSong = () => {
     if(audio.currentTime == 0 && currentSongIndex == 0){
         playSong(currentSongIndex);
-        playPauseSongButton.src = "midia/pause-music.png";
+        playPauseSongButton.src = "/midia/pause-music.png";
     }else{
         audio.pause();
         if (currentSongIndex < currentPlayList.length){
@@ -196,7 +196,7 @@ const nextSong = () => {
 const previousSong = () => {
     if(currentSongIndex == 0){
         playSong(currentSongIndex);
-        playPauseSongButton.src = "midia/pause-music.png";
+        playPauseSongButton.src = "/midia/pause-music.png";
     }else if(audio.currentTime > 5){
         audio.pause();
         playSong(currentSongIndex);
